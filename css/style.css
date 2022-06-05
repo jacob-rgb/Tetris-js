@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'tetris';
+    src: url('../assets/FontsFree-Net-Tetris.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('../assets/bg.png');
+    font-family: 'tetris', serif;
+    color: white;
+}
+
+.general-title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 600px;
+    background-color: rgb(67, 67, 67);
+    position: relative;
+    border: 2px solid rgb(146, 146, 146);
+}
+
+.pause::before {
+    content: 'Pause';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    background-color: rgb(67, 67, 67);
+    color: white;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(67, 67, 67);
+
+}
+
+.over::before {
+    content: 'Game Over';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    background-color: rgb(67, 67, 67);
+    color: white;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid > div {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(67, 67, 67);
+    outline: 1px solid rgb(182, 182, 182);
+}
+
+.grid > .tetromino {
+    background-color: blue ;
+}
+
+.grid > .taken {
+    background-color: transparent;
+    outline: none;
+}
+
+.mini-grid {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(67, 67, 67);
+    border: 2px solid rgb(146, 146, 146);
+
+}
+
+.mini-grid div {
+    width: 20px;
+    height: 20px;
+    outline: 1px solid rgb(182, 182, 182);
+}
+
+.mini-grid .tetromino {
+    background-color: blue;
+}
+
+.container .side h3 {
+    color: white;
+    text-align: start;
+}
+.container .side #score {
+    color: white;
+}
+
+.container .side #start-button,
+.container .side #new-button {
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(67, 67, 67);
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid rgb(146, 146, 146);
+    display: block;
+    margin: 10px 0;
+}
+
+.container .side #new-button {
+    display: none;
+}
+
+.container .side #start-button:hover {
+    color: rgb(150, 150, 150);
+}
+
+#scores-box {
+    color: white;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    font-size: 20px;
+}
